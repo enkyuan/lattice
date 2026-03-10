@@ -25,7 +25,7 @@ const rawEnv = {
 
 if (!Value.Check(EnvSchema, rawEnv)) {
   const errors = [...Value.Errors(EnvSchema, rawEnv)];
-  console.error("❌ Invalid environment variables:", JSON.stringify(errors, null, 2));
+  console.error("Invalid environment variables:", JSON.stringify(errors, null, 2));
   throw new Error("Invalid environment variables");
 }
 

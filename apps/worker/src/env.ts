@@ -49,7 +49,7 @@ const rawEnv = {
 
 if (!Value.Check(EnvSchema, rawEnv)) {
   const errors = [...Value.Errors(EnvSchema, rawEnv)];
-  console.error("❌ Worker: Invalid environment variables:", JSON.stringify(errors, null, 2));
+  console.error("Worker: Invalid environment variables:", JSON.stringify(errors, null, 2));
   // In dev, we might not have all S3 vars yet, so we don't throw if we want to allow partial setup
   // but for production, we should probably be stricter.
   if (process.env.NODE_ENV === "production") {
