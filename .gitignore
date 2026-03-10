@@ -12,3 +12,7 @@ apps/api/src/**/*.js
 # OS files
 Thumbs.db
 *.swp
+
+.vscode/
+**/.vscode/
+docs/
