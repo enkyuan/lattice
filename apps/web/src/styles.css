@@ -1,0 +1,8 @@
+@import '@lattice/ui/index.css';
+@source "../node_modules/@lattice/ui/src";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

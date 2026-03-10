@@ -1,0 +1,32 @@
+{
+  "name": "lattice",
+  "private": true,
+  "packageManager": "bun@1.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "fmt": "turbo run fmt",
+    "fmt:check": "turbo run fmt:check",
+    "test": "turbo run test",
+    "clean": "turbo run clean --force && rm -rf node_modules",
+    "prepare": "husky || true",
+    "docker:up": "docker compose -f docker/docker-compose.yml --project-directory docker up -d",
+    "docker:down": "docker compose -f docker/docker-compose.yml --project-directory docker down",
+    "docker:restart": "docker compose -f docker/docker-compose.yml --project-directory docker restart",
+    "docker:logs": "docker compose -f docker/docker-compose.yml --project-directory docker logs -f",
+    "docker:ps": "docker compose -f docker/docker-compose.yml --project-directory docker ps",
+    "docker:pull": "docker compose -f docker/docker-compose.yml --project-directory docker pull",
+    "docker:build": "docker compose -f docker/docker-compose.yml --project-directory docker build"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "turbo": "^2.3.3"
+  }
+}
